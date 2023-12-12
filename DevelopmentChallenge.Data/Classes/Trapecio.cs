@@ -4,28 +4,28 @@ namespace DevelopmentChallenge.Data.Classes
 {
     public class Trapecio : IFormaGeometrica
     {
-        public decimal Lado1 { get; set; }
-        public decimal Lado2 { get; set; }
-        public decimal Lado3 { get; set; }
-        public decimal Lado4 { get; set; }
+        public decimal BaseMayor { get; set; }
+        public decimal BaseMenor { get; set; }
+        public decimal Pierna1 { get; set; }
+        public decimal Pierna2 { get; set; }
         public decimal Altura { get; set; }
-        public Trapecio(decimal lado1, decimal lado2, decimal lado3, decimal lado4, decimal altura)
+        public Trapecio(decimal baseMayor, decimal baseMenor, decimal pierna1, decimal pierna2, decimal altura)
         {
-            Lado1 = lado1;
-            Lado2 = lado2;
-            Lado3 = lado3;
-            Lado4 = lado4;
+            BaseMayor = baseMayor;
+            BaseMenor = baseMenor;
+            Pierna1 = pierna1;
+            Pierna2 = pierna2;
             Altura = altura;
         }
 
         public decimal CalcularArea()
         {
-            return 0.5m * (Lado1 + Lado2) * Altura;
+            return 0.5m * (BaseMayor + BaseMenor) * Altura;
         }
 
         public decimal CalcularPerimetro()
         {
-            return Lado1 + Lado2 + Lado3 + Lado4;
+            return BaseMayor + BaseMenor + Pierna1 + Pierna2;
         }
     }
 }
